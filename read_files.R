@@ -6,7 +6,13 @@ cust <- read.table("custs.txt", sep="\t", header=TRUE, stringsAsFactors = FALSE)
 prod <- read.table("product.txt", sep="\t", header=FALSE)
 trans <- read.transactions("trans.txt", sep=",")
 
-# Replace "Org" value in customer data with 1 for b, 2 for g
+# Drop missing values
+cust <- na.omit(cust)
+
+# Replace "Org" value in customer data with 1 for b, 0 for g
 cust[cust$org == "b",]$org <- 1
 cust[cust$org == "g",]$org <- 0
 cust$org <- as.integer(cust$org)
+
+# Determine if customer is late or not (>20)
+# cust["IsLate"] <- (cust$daysLate > 20)

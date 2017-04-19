@@ -9,7 +9,7 @@ for(i in 2:n){
 plot(ans,type="l")
 
 # Select a k value to use
-k <- 5
+k <- 4
 clst <- kmeans(na.omit(cust[,2:14]),k)
 
 # Display cluster centers
