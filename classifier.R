@@ -49,7 +49,7 @@ recall <- matrix(0,2,1)
 precision[1,1] <- confusion[1,1] / (confusion[1,1] + confusion[2,1])
 precision[2,1] <- confusion[1,2] / (confusion[1,2] + confusion[2,2])
 recall[1,1] <- confusion[1,1] / (confusion[1,1] + confusion[1,2])
-recall[2,1] <- confusion[2,1] / (confusion[2,1] + confusion[2,2])
+recall[2,1] <- confusion[2,2] / (confusion[2,1] + confusion[2,2])
 
 # Print confusion matrix, accuracy, precision, and recall. (0 = Not Late, 1 = Late)
 confusion
