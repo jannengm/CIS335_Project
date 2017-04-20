@@ -91,3 +91,5 @@ print(paste("Precision (Not Late): ", precision[1,1]))
 print(paste("Precision (Late): ", precision[2,1]))
 print(paste("Recall (Not Late): ", recall[1,1]))
 print(paste("Recall (Late): ", recall[2,1]))
+
+plot(ann)
